@@ -61,12 +61,26 @@ function Modal(props) {
         }).then((response)=>{
             const {error,message,room} = response.data;
             if(error){
-                return alert(error);
+                    props.setError(error);
+                    
+                  props.setModal(false)
+                  setTimeout(()=>{
+                    props.setError(false);
+                  },5000)
             }
 
-            props.addRoom(room)
+            else{
+                props.addRoom(room)
+                props.setModal(false)
+                props.setError(message);
+    
+                setTimeout(()=>{
+                    props.setError(false);
+                },5000)
+            }
 
-            alert(message);
+            
+
         })
     }
 

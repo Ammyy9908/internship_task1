@@ -15,12 +15,11 @@ function Navbar(props) {
                         <img src={add} alt="add-icon" />
                         
                     </button>}
-                    <div className="navbar__auth">
-                        <span>{props.user && props.user.name}</span>
+                  
                     <div className="user__avatar__header">
                         <span>{props.user && props.user.name.charAt(0).toUpperCase()}</span>
                     </div>
-                    </div>
+                   
                 </div>
             </div>
         </div>

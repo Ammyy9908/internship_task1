@@ -6,9 +6,26 @@ import axios from 'axios';
 import { connect } from 'react-redux';
 
 
-function StduentCard({sid,user,class_id,setError}) {
+function StduentCard({sid,user,class_id,setError,class_attendance}) {
 
     const [student,setStudent] = React.useState(null);
+    const [isDoneAttendance,setAttendanceDone] = React.useState(false);
+
+
+
+
+
+    const isAttendanceDone = ()=>{
+        const index = class_attendance.findIndex((attendance)=>{
+            return attendance.student_id===sid;
+        })
+
+        console.log("Yes Present at ",index);
+        return index;
+    }
+
+    
+
 
     React.useEffect(()=>{
         axios.get(`https://intenshipserver.herokuapp.com/auth/student/${sid}`).then((response)=>{
@@ -17,9 +34,30 @@ function StduentCard({sid,user,class_id,setError}) {
         }).catch((e)=>{
             console.log(e)
         })
+
+       
     },
     // eslint-disable-next-line
     [])
+
+
+    const handleAttend = ()=>{
+        axios.post(`http://localhost:5000/attendance/create/${class_id}/${sid}`,{
+            date:`${new Date().getDate()}-${new Date().getMonth()}-${new Date().getFullYear()}`
+        }).then((response)=>{
+            console.log(response);
+            const {is_attend} = response.data;
+
+            setAttendanceDone(is_attend);
+            setError(`Attendance to ${student.name} is Assigned!`);
+
+            setTimeout(()=>{
+                setError(false);
+            },5000)
+        }).catch((e)=>{
+            console.log(e);
+        })
+    }
 
 
     const handleRemove  = (e)=>{
@@ -38,6 +76,7 @@ function StduentCard({sid,user,class_id,setError}) {
         const parent = e.target.parentElement.parentElement.parentElement.parentElement;
         parent.remove()
     }
+
     return (
         <div className="student_card">
             <div className="student__card__wrapper">
@@ -46,15 +85,14 @@ function StduentCard({sid,user,class_id,setError}) {
                         <span>{student && student.name.charAt(0).toUpperCase()}</span>
                     </div>
                     {user && user.account_type==="teacher" && <div className="student_controls">
-                        <button><img src={done} alt="done__icon" /></button>
+                        {isAttendanceDone()<0 && !isDoneAttendance && <button onClick={handleAttend}><img src={done} alt="done__icon" /></button>}
                         <button onClick={handleRemove}><img src={delete_icon} alt="delete_icon" /></button>
                     </div>}
                 </div>
 
                 <div className="card__content">
                     <h3>{student && student.name===user.name ?"You":student && student.name}</h3>
-                    <span>Total Class:10</span>
-                    <span>Attendance : 85%</span>
+                    <p>{student && student.email}</p>
 
                 </div>
             </div>

@@ -1,7 +1,7 @@
 const intialState = {
     user:null,
     isModal:false,
-    rooms:[]
+    rooms:null
 }
 
 

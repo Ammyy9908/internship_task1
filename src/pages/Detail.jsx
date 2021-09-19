@@ -12,6 +12,7 @@ function Detail(props) {
 
     const [room,setRoom] = React.useState(null);
     const [error,setError]  = React.useState(false);
+    const [class_attendance,setAttendance] = React.useState(null);
     const history = useHistory();
 
     React.useEffect(()=>{
@@ -22,12 +23,21 @@ function Detail(props) {
         }).catch((e)=>{
             console.log(e);
         })
+
+        axios.get(`http://localhost:5000/attendance/read/${props.class_id}`).then((response)=>{
+            console.log(`Incoming Attendance for the class =>`,response.data);
+            setAttendance(response.data.filter((attendance)=>attendance.date===`${new Date().getDate()}-${new Date().getMonth()}-${new Date().getFullYear()}`))
+
+        })
     },[props.class_id])
 
 
     const handleMoveHome = ()=>{
         history.push('/');
     }
+
+
+    console.log(class_attendance && class_attendance)
 
    
     return (
@@ -40,7 +50,7 @@ function Detail(props) {
                 <div className="class_students">
                     {
                         room ? room.joined_by.map((student)=>{
-                            return <StduentCard sid={student} class_id={room._id} setError={setError}/>
+                            return <StduentCard sid={student} class_id={room._id} setError={setError} class_attendance={class_attendance}/>
                         })
                     
 

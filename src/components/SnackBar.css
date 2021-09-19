@@ -1,10 +1,10 @@
 .snackbar{
-    width: 250px;
+    
     height: 56px;
     background-color: rgb(63, 63, 63);
     position: fixed;
     bottom: -215px;
-    right: 15px;
+    left: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -25,5 +25,5 @@
 .snackbar__container span{
     font-weight: 600;
     width: 100%;
-    font-size: 14px;
+    font-size: 12px;
 }
