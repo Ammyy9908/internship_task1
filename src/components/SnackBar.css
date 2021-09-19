@@ -1,0 +1,29 @@
+.snackbar{
+    width: 250px;
+    height: 56px;
+    background-color: rgb(63, 63, 63);
+    position: fixed;
+    bottom: -215px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    color: #fff;
+    transition: all .2s ease-in;
+}
+.snackbar__enable{
+    bottom: 15px;
+}
+
+.snackbar__container{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+
+}
+.snackbar__container span{
+    font-weight: 600;
+    width: 100%;
+    font-size: 14px;
+}

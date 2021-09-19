@@ -1,0 +1,34 @@
+.blank-student-card{
+    height: 296px;
+    background-color: #e9e9e966;
+    border-radius: 18px;
+    cursor: pointer;
+}
+
+.student__blank__card__avatar{
+    width: 96px;
+    height: 96px;
+    background-color: rgb(197, 197, 197);
+    border-radius: 65px;
+}
+.blank_student_name{
+    width: 75%;
+    height: 15px;
+    background-color: #999;
+    margin-bottom: 10px;
+    border-radius: 3px;
+}
+.student_blank_total_class{
+    width: 65%;
+    height: 12px;
+    background-color: rgb(211, 211, 211);
+    margin-bottom: 10px;
+    border-radius: 3px;
+}
+.student_blank_attendance{
+    width: 55%;
+    height: 10px;
+    background-color: rgb(77, 77, 77);
+    margin-bottom: 10px;
+    border-radius: 3px;
+}

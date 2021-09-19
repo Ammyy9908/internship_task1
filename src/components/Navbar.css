@@ -1,0 +1,85 @@
+.header{
+    width: 100%;
+    height: 99px;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 8.2093px 33.4221px rgba(0, 0, 0, 0.0503198), 0px -2.20831px 17.869px rgba(0, 0, 0, 0.0417275), 0px -1.44223px 10.0172px rgba(0, 0, 0, 0.035), 0px 0.561817px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 1.28929px 2.21381px rgba(0, 0, 0, 0.0196802);
+}
+.header__wrapper{
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.header__right{
+    display: flex;
+    align-items: center;
+    gap:25px;
+}
+.header__right button{
+    width: 25px;
+    height: 25px;
+    border: 1px solid transparent;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.header__left a{
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+}
+.header__right button img{
+    width: 29px;
+    height: 29px;
+}
+
+.navbar__auth{
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:15px;
+    background-color: rgba(83, 33, 246, 0.863);
+   color: #fff;
+    width: 120px;
+    border-radius: 65px;
+
+}
+.navbar__auth > span{
+    margin-left: 10px;
+}
+
+.user__avatar__header{
+    width: 30px;
+    height: 30px;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+
+} 
+.user__avatar__header span{
+    font-weight: 600;
+}
+
+
+@media screen and (max-width:685px){
+    .header{
+        height: 56px;
+       
+        z-index: 999;
+    }
+    .user__avatar__header{
+        width: 35px;
+        height: 35px;
+    }
+}

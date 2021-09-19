@@ -1,0 +1,67 @@
+.student_card{
+    height: 296px;
+    background-color: #5C16F166;
+    border-radius: 18px;
+    cursor: pointer;
+    box-shadow: 0px 100px 203px rgba(95, 19, 253, 0.07), 0px 81.2055px 88.0252px rgba(95, 19, 253, 0.0498904), 0px 50.2312px 49.5609px rgba(95, 19, 253, 0.0399661), 0px 19.0683px 28.2297px rgba(95, 19, 253, 0.0331374), 0px 0.335333px 14.8192px rgba(95, 19, 253, 0.0270446), 0px -4.88752px 5.95166px rgba(95, 19, 253, 0.0194017);
+}
+.student__card__wrapper{
+    width: 90%;
+    margin: 5px auto;
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+    height: 100%;
+    justify-content: center; 
+}
+.card__top{
+    display: flex;
+    gap:12px;
+    align-items: center;
+    justify-content: space-between;
+}
+.student__card__avatar{
+    width: 94px;
+    height: 94px;
+    background-color: rgb(52, 255, 221);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.student__card__avatar span{
+    color: #fff;
+    font-size: 35px;
+}
+.student_controls{
+    display: flex;
+    gap:12px;
+}
+.student_controls button{
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+.student_controls button img{
+    pointer-events: none;
+}
+.student_controls button:nth-child(1){
+    background: #40EFC5;
+box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+
+}
+.student_controls button:nth-child(2){
+    background: #EF8940;
+box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+
+}
+
+.card__content{
+    color: #fff;
+}
+.card__content span{
+    display: block;
+    margin-bottom: 5px;
+}

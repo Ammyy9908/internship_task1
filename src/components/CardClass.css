@@ -1,0 +1,53 @@
+.card-class{
+
+    background-color: #fff;
+    box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 16.3285px 33.4221px rgba(0, 0, 0, 0.0613924), 0px 4.62467px 17.869px rgba(0, 0, 0, 0.0535224), 0px 2.5514px 10.0172px rgba(0, 0, 0, 0.0456101), 0px 2.30776px 5.32008px rgba(0, 0, 0, 0.0367002), 0px 1.71097px 2.21381px rgba(0, 0, 0, 0.0248875);
+    border-radius: 5px;
+    cursor: pointer;
+    height: 180px;
+    position: relative;
+}
+
+.class__teacher__avatar{
+    width: 66px;
+    height: 66px;
+    background-color: rgb(94, 14, 241);
+    position: absolute;
+    top: -25px;
+    right: 10px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 900;
+}
+
+
+.card__wrapper{
+    width: 90%;
+    margin: 5px auto;
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+    height: 100%;
+    justify-content: center;
+}
+
+.card__wrapper h3{
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.class_view_btn{
+    display: block;
+    width: 128px;
+    height: 38px;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+}
