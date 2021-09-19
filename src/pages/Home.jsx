@@ -6,6 +6,7 @@ import CardClass from '../components/CardClass'
 import Modal from '../components/Modal'
 import Navbar from '../components/Navbar'
 import SnackBar from '../components/SnackBar'
+import {FiLogOut} from "react-icons/fi"
 import "./Home.css"
 function Home(props) {
     
@@ -59,7 +60,8 @@ function Home(props) {
             </div>
 
                 <button className="logout_btn" onClick={handleLogout}>
-                    Logout
+                    <span>Logout</span>
+                    <FiLogOut/>
                 </button>
         </div>
     )

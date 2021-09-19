@@ -56,6 +56,9 @@
     right: 15px;
     cursor: pointer;
 }
+.logout_btn svg{
+    visibility: hidden;
+}
 
 
 @media screen and (max-width:1100px){
@@ -67,4 +70,17 @@
     .classes{
         grid-template-columns: 1fr;
     }
+    .logout_btn span{
+        display: none;
+    }
+    .logout_btn{
+        width: 49px;
+        height: 49px;
+        border-radius: 50%;
+    }
+    .logout_btn svg{
+        visibility: visible;
+    }
+    
 }
+

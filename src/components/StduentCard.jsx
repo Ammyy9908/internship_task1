@@ -16,7 +16,7 @@ function StduentCard({sid,user,class_id,setError,class_attendance}) {
 
 
     const isAttendanceDone = ()=>{
-        const index = class_attendance.findIndex((attendance)=>{
+        const index = class_attendance && class_attendance.findIndex((attendance)=>{
             return attendance.student_id===sid;
         })
 
