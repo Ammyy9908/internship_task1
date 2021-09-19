@@ -24,7 +24,7 @@ function Detail(props) {
             console.log(e);
         })
 
-        axios.get(`http://localhost:5000/attendance/read/${props.class_id}`).then((response)=>{
+        axios.get(`https://intenshipserver.herokuapp.com/attendance/read/${props.class_id}`).then((response)=>{
             console.log(`Incoming Attendance for the class =>`,response.data);
             setAttendance(response.data.filter((attendance)=>attendance.date===`${new Date().getDate()}-${new Date().getMonth()}-${new Date().getFullYear()}`))
 

@@ -42,7 +42,7 @@ function StduentCard({sid,user,class_id,setError,class_attendance}) {
 
 
     const handleAttend = ()=>{
-        axios.post(`http://localhost:5000/attendance/create/${class_id}/${sid}`,{
+        axios.post(`https://intenshipserver.herokuapp.com/attendance/create/${class_id}/${sid}`,{
             date:`${new Date().getDate()}-${new Date().getMonth()}-${new Date().getFullYear()}`
         }).then((response)=>{
             console.log(response);
